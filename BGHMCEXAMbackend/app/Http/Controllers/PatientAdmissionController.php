@@ -56,12 +56,13 @@ class PatientAdmissionController extends Controller
             $requestData = $request->all();
             $pat_lastname = $requestData['pat_lastname'] ?? null;
             $pat_firstname = $requestData['pat_firstname'] ?? null;
-            $pat_birth = $requestData['pat_birth'] ?? null;
+            // $pat_birth = $requestData['pat_birth'] ?? null;
             $admission = $requestData['admission'] ?? null;
             $ward = $requestData['ward'] ?? null;
 
             // Generate unique text using md5 hash
-            $uniqueText = md5($pat_lastname . $pat_firstname . $pat_birth . $admission . $ward);
+            // . $pat_birth
+            $uniqueText = md5($pat_lastname . $pat_firstname . $admission . $ward);
 
             // Assign uniqueText to the enccode key in requestData
             $requestData['enccode'] = $uniqueText;
