@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-class PatientAdmissionController extends Controller
+class DashboardController extends Controller
 {
     public function headersPatients(Request $request)
     {
         try {
             // Retrieve patient details from the database
-            $patientDetails = DB::table('patient_details')->get();
             $today = Carbon::today()->toDateString();
             $totalPatientsToday = DB::table('patient_details')
             ->whereDate('created_at', $today)
@@ -55,4 +54,6 @@ class PatientAdmissionController extends Controller
             'discharged_today'=>$totalPatientsDischargedToday
         ]);
     }
+
+
 }

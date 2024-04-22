@@ -514,7 +514,7 @@ const dischargeUpdate = async () => {
 <!-- admit patient dialog -->
 
             
-            <!-- <div class="card">
+            <div class="card">
                 <h5>Recently Discharged Patients</h5>
                 <DataTable :value="products" :rows="5" :paginator="true" responsiveLayout="scroll">
                     <Column field="name" header="Name" :sortable="true" style="width: 35%"></Column>
@@ -530,7 +530,7 @@ const dischargeUpdate = async () => {
                         </template>
                     </Column>
                 </DataTable>
-            </div> -->
+            </div>
         </div>
         <div class="col-12 xl:col-6">
             <div class="card">
