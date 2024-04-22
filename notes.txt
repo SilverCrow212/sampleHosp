@@ -1,0 +1,12 @@
+*to be updated
+update api 
+add api pinia
+add pinia variables for each component storage
+extend components from dashboard
+
+*priority
+-add authentication
+-update the users table
+-use sanctum
+-add login page
+-add pop up dialog if token is expired (base it on every api used or make a way for it to detect unauthorized token)
